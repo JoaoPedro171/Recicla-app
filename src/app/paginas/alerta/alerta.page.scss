@@ -1,0 +1,136 @@
+.header-button {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+  
+.back-button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+  
+.back-button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+  
+.back-button h2 {
+    margin-top: 11px;
+}
+
+.alerta-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.location-title {
+    margin-left: 40px;
+}
+
+.categoria-select {
+    display: flex;
+    align-items: center;
+    margin-top: 40px; /* Espaço entre a barra de localização e o select */
+    margin-left: 40px;
+    font-size: 16px;
+}
+  
+.categoria-select label {
+    margin-right: 10px; /* Espaço entre o label e o select */
+    font-weight: bold;
+}
+  
+.categoria-select select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.descricao {
+    margin-top: 30px;
+}
+
+.input {
+    max-width: 320px;
+    margin-bottom: 15px;
+    border: solid 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    margin: auto;
+    --padding-start: 15px;
+    --min-height: 100px; /* Define uma altura mínima para o campo de descrição */
+}
+
+.foto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px; /* Espaço entre a descrição e o quadrado */
+}
+
+.foto-quadrado {
+    width: 150px; /* Defina a largura desejada */
+    height: 150px; /* Defina a altura desejada */
+    border: solid 2px #000; /* Borda do quadrado */
+    border-radius: 10px; /* Borda arredondada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Oculta partes da imagem que saem do quadrado */
+}
+
+.foto-quadrado img {
+    width: 50%; /* A imagem cobre todo o quadrado */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Garante que a imagem cubra o quadrado */
+}
+
+.camera-button {
+    position: absolute;
+    bottom: 20px; /* Distância do fundo da página */
+    left: 50%; /* Distância da borda esquerda */
+    transform: translateX(-50%);
+    width: 60px; /* Largura do botão */
+    height: 60px; /* Altura do botão */
+    border: none; /* Remove a borda padrão */
+    background-color: #A2B4FC; /* Cor de fundo */
+    border-radius: 50%; /* Faz o botão ser circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    display: flex; /* Flexbox para centralizar a imagem */
+    align-items: center; /* Alinhamento vertical */
+    justify-content: center; /* Alinhamento horizontal */
+}
+
+.camera-button img {
+    width: 50%; /* Ajusta o tamanho da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.avisos-button {
+    position: absolute;
+    bottom: 20px; /* Distância do fundo da página */
+    right: 20px; /* Distância da borda direita */
+    width: 60px; /* Largura do botão */
+    height: 60px; /* Altura do botão */
+    border: none; /* Remove a borda padrão */
+    background-color: #A2B4FC; /* Cor de fundo */
+    border-radius: 50%; /* Faz o botão ser circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    display: flex; /* Flexbox para centralizar a imagem */
+    align-items: center; /* Alinhamento vertical */
+    justify-content: center; /* Alinhamento horizontal */
+}
+
+.avisos-button img {
+    width: 50%; /* Ajusta o tamanho da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}

@@ -1,0 +1,13 @@
+.location-bar {
+    width: 80%;                 /* Largura da barra de localização */
+    margin: 0 auto;             /* Centraliza horizontalmente */
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;        /* Bordas arredondadas */
+    margin-top: 20px;           /* Espaço entre o título e a barra */
+    border: solid 1px;
+  }

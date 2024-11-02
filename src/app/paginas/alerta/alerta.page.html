@@ -1,0 +1,47 @@
+<ion-content class="page">
+
+  <div class="header-button">
+    <button class="back-button" (click)="voltar()">
+      <img src="assets/left-arrow.png" alt="Voltar" />
+      <h2>Alerta</h2>
+    </button>
+  </div>
+
+  <div class="alerta-container">
+
+    <h2 class="location-title">Localização</h2>
+
+    <app-localizacao></app-localizacao>
+  
+    <div class="categoria-select">
+      <label for="categoria">Categoria:</label>
+      <select id="categoria" name="categoria" [(ngModel)]="categoria">
+        <option value="organico">Orgânico</option>
+        <option value="moveis">Móveis</option>
+        <option value="solidos">Sólidos</option>
+        <option value="eletronicos">Eletrônicos</option>
+        <option value="outros">Outros</option>
+      </select>
+    </div>
+  </div>
+
+  <ion-item lines="none" class="descricao">
+    <ion-textarea placeholder="Descrição" class="input" rows="5" [(ngModel)]="descricao"></ion-textarea>
+  </ion-item>
+
+  <div class="foto-container">
+    <div class="foto-quadrado" *ngIf="foto">
+      <img [src]="foto" alt="Foto Tirada" />
+    </div>
+    <div class="foto-quadrado" *ngIf="!foto">
+      <img src="assets/camera.png" alt="Camera" />
+    </div>
+    <button class="camera-button" (click)="tirarFoto()">
+      <img src="assets/camera.png" alt="Tirar Foto" />
+    </button>
+    <button class="avisos-button" (click)="salvarAvisos()">
+      <img src="assets/right-arrow.png" alt="Salvar Avisos" />
+    </button>
+  </div>
+
+</ion-content>

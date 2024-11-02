@@ -1,0 +1,9 @@
+<div *ngFor="let aviso of avisos" class="aviso-item">
+  <p><strong>Categoria:</strong> {{ aviso.categoria }}</p>
+  <p><strong>Descrição:</strong> {{ aviso.descricao }}</p>
+  <p><strong>Localização:</strong> Latitude: {{ aviso.localizacao?.latitude }}, Longitude: {{ aviso.localizacao?.longitude }}</p>
+  <div *ngIf="aviso.foto">
+    <p><strong>Foto:</strong></p>
+    <img [src]="aviso.foto" alt="Foto do Aviso" />
+  </div>
+</div>

@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'carregar',
+    loadChildren: () => import('./paginas/carregar/carregar.module').then( m => m.CarregarPageModule)
+  },
+  {
+    path: 'alerta',
+    loadChildren: () => import('./paginas/alerta/alerta.module').then( m => m.AlertaPageModule)
+  },
 ];
 
 @NgModule({

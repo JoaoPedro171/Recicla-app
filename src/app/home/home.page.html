@@ -1,20 +1,33 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
+  <ion-content class="login-content">
+    <div class="logo-container">
+      <img src="assets/logo-recycle.png" alt="Logo Recicla +" class="logo-image" />
+      <h1 class="app-name">Recicla +</h1>
+    </div>
+    
+    <h2 class="login-title">Acessar</h2>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="enter">
+    <ion-item lines="none" class="input-item" id="emailid">
+      <ion-input type="email" placeholder="Email" class="input-field"></ion-input>
+    </ion-item>
+    
+    <hr>
+    
+    <ion-item lines="none" class="input-item" id="senhaid">
+      <ion-input type="password" placeholder="Senha" class="input-field"></ion-input>
+    </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <hr>
+  
+    <ion-button expand="block" class="login-button" (click)="login()">Login</ion-button>
   </div>
-</ion-content>
+
+    <div class="links-container">
+      <a href="#" class="link">Esqueci minha senha</a>
+      <a href="#" class="link">Não tenho uma conta</a>
+    </div>
+  </ion-content>
+</ion-app>
+
+
