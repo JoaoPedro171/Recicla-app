@@ -21,6 +21,10 @@ export class CarregarPage {
     this.router.navigate(['/alerta']);
   }
 
+  lista() {
+    this.router.navigate(['/lista']);
+  }
+
   loadMap() {
     const script = document.createElement('script');
     script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDoFXDR_S2gRtyEu9ShA0uWiLQTyviXyjc&callback=initMap`;

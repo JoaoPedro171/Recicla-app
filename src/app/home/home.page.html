@@ -4,30 +4,28 @@
       <img src="assets/logo-recycle.png" alt="Logo Recicla +" class="logo-image" />
       <h1 class="app-name">Recicla +</h1>
     </div>
-    
+
     <h2 class="login-title">Acessar</h2>
 
-  <div class="enter">
-    <ion-item lines="none" class="input-item" id="emailid">
-      <ion-input type="email" placeholder="Email" class="input-field"></ion-input>
-    </ion-item>
-    
-    <hr>
-    
-    <ion-item lines="none" class="input-item" id="senhaid">
-      <ion-input type="password" placeholder="Senha" class="input-field"></ion-input>
-    </ion-item>
+    <div class="enter">
+      <ion-item lines="none" class="input-item" id="emailid">
+        <ion-input type="email" placeholder="Email" class="input-field" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      
+      <hr>
+      
+      <ion-item lines="none" class="input-item" id="senhaid">
+        <ion-input type="password" placeholder="Senha" class="input-field" [(ngModel)]="senha"></ion-input>
+      </ion-item>
 
-    <hr>
-  
-    <ion-button expand="block" class="login-button" (click)="login()">Login</ion-button>
-  </div>
+      <hr>
+    
+      <ion-button expand="block" class="login-button" (click)="login()">Login</ion-button>
+    </div>
 
     <div class="links-container">
+      <a [routerLink]="['/conta']" class="link">Não tenho uma conta</a>
       <a href="#" class="link">Esqueci minha senha</a>
-      <a href="#" class="link">Não tenho uma conta</a>
     </div>
   </ion-content>
 </ion-app>
-
-

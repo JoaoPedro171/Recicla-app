@@ -19,6 +19,18 @@ const routes: Routes = [
     path: 'alerta',
     loadChildren: () => import('./paginas/alerta/alerta.module').then( m => m.AlertaPageModule)
   },
+  {
+    path: 'lista',
+    loadChildren: () => import('./paginas/lista/lista.module').then( m => m.ListaPageModule)
+  },
+  {
+    path: 'configuracao',
+    loadChildren: () => import('./paginas/configuracao/configuracao.module').then( m => m.ConfiguracaoPageModule)
+  },
+  {
+    path: 'conta',
+    loadChildren: () => import('./paginas/conta/conta.module').then( m => m.ContaPageModule)
+  },
 ];
 
 @NgModule({

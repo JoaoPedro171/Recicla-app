@@ -14,4 +14,9 @@ export class AvisosService {
   enviarAlerta(dadosAlerta: any): Observable<any> {
     return this.http.post(this.apiUrl, dadosAlerta);
   }
+
+  // Método para buscar todos os alertas do back-end
+  buscarAlertas(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
+  }
 }
