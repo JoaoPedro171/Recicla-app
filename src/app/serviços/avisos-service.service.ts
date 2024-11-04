@@ -3,20 +3,20 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class AvisosService {
-  private apiUrl = 'https://seu-backend-url.com/avisos'; // Coloque a URL do seu back-end
+  private apiUrl = 'https://seu-backend-url.com/api'; // URL do seu back-end
 
   constructor(private http: HttpClient) {}
 
-  // Método para enviar dados do alerta para o back-end
-  enviarAlerta(dadosAlerta: any): Observable<any> {
-    return this.http.post(this.apiUrl, dadosAlerta);
+  // Método para buscar alertas do usuário logado
+  buscarAlertas(usuarioId: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/alertas?usuarioId=${usuarioId}`);
   }
 
-  // Método para buscar todos os alertas do back-end
-  buscarAlertas(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl);
+  // Método para enviar um alerta
+  enviarAlerta(dadosAlerta: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/alertas`, dadosAlerta);
   }
 }

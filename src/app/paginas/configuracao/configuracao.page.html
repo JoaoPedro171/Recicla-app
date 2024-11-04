@@ -1,13 +1,39 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>configuracao</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="header-button">
+  <button class="back-button" (click)="voltar()">
+    <img src="assets/left-arrow.png" alt="Voltar" />
+    <h2>Configurações</h2>
+  </button>
+</div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">configuracao</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+<div class="user-info">
+  <h2 class="user-name">{{ nomeUsuario }}</h2>
+  <p class="user-email">{{ emailUsuario }}</p>
+</div>
+
+<div class="options">
+  <p class="">Preferências</p>
+  <div>
+    <button class="user-button" (click)="usuario()">
+      <img src="assets/customer.png" alt="Usuário" />
+      <h2>Usuário</h2>
+    </button>
+  </div>
+  <div>
+    <button class="user-button" (click)="seguranca()">
+      <img src="assets/lock.png" alt="Usuário" />
+      <h2>Segurança e Privacidade</h2>
+    </button>
+  </div>
+  <div>
+    <button class="user-button" (click)="ajuda()">
+      <img src="assets/interrogation.png" alt="Usuário" />
+      <h2>Ajuda</h2>
+    </button>
+  </div>
+  <div>
+    <button class="user-button" (click)="logout()">
+      <img src="assets/logout.png" alt="Usuário" />
+      <h2>Sair da Conta</h2>
+    </button>
+  </div>
+</div>

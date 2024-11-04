@@ -17,6 +17,10 @@ export class CarregarPage {
     this.loadMap();
   }
 
+  configuracao() {
+    this.router.navigate(['/configuracao']);
+  }
+
   alerta() {
     this.router.navigate(['/alerta']);
   }

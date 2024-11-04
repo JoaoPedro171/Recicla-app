@@ -31,6 +31,18 @@ const routes: Routes = [
     path: 'conta',
     loadChildren: () => import('./paginas/conta/conta.module').then( m => m.ContaPageModule)
   },
+  {
+    path: 'seguranca',
+    loadChildren: () => import('./paginas/seguranca/seguranca.module').then( m => m.SegurancaPageModule)
+  },
+  {
+    path: 'usuario',
+    loadChildren: () => import('./paginas/usuario/usuario.module').then( m => m.UsuarioPageModule)
+  },
+  {
+    path: 'ajuda',
+    loadChildren: () => import('./paginas/ajuda/ajuda.module').then( m => m.AjudaPageModule)
+  },
 ];
 
 @NgModule({

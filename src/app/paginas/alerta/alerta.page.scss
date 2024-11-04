@@ -89,7 +89,7 @@
 }
 
 .foto-quadrado img {
-    width: 50%; /* A imagem cobre todo o quadrado */
+    width: 100%; /* A imagem cobre todo o quadrado */
     height: auto; /* Mantém a proporção da imagem */
     object-fit: cover; /* Garante que a imagem cubra o quadrado */
 }

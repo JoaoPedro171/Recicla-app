@@ -1,0 +1,70 @@
+.header-button {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+  
+.back-button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+  
+.back-button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+  
+.back-button h2 {
+    margin-top: 11px;
+}
+  
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px; /* Ajuste para ficar abaixo do header */
+}
+  
+.user-name {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+  
+.user-email {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+}
+  
+.options {
+    height: 80%;
+    margin-left: 10%;
+    color: #a1a1a1;
+}
+
+.user-button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.user-button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.user-button h2 {
+    margin-top: 11px;
+}
