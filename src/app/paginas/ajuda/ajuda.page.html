@@ -1,13 +1,16 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>ajuda</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">ajuda</ion-title>
-    </ion-toolbar>
+<div class="page-help">
+  <ion-header>
+    <div class="header-button">
+      <button class="back-button" (click)="voltar()">
+        <img src="assets/left-arrow.png" alt="Voltar" />
+        <h2>Ajuda</h2>
+      </button>
+    </div>
   </ion-header>
-</ion-content>
+
+  <div class="help-content">
+    <p class="text">
+      Bem-vindo ao Recicla+, um aplicativo criado para ajudar a manter nossas cidades mais limpas e promover a sustentabilidade! O Recicla+ permite que você faça alertas sobre locais com lixo, indicando a localização, a categoria do material descartado, uma descrição e até mesmo uma foto. Esses alertas são visualizados por empresas e ONGs de reciclagem, que podem recolher o material para reutilização ou descarte adequado. Ao fazer um alerta válido, você contribui para a limpeza urbana e ainda ganha recompensas como cupons e descontos em empresas parceiras. Com isso, o Recicla+ incentiva o engajamento de todos na reciclagem e oferece mais visibilidade para as empresas comprometidas com a sustentabilidade!
+    </p>
+  </div>
+</div>

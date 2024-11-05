@@ -40,6 +40,19 @@ export class AuthService {
     return null;
   }
 
+  alterarSenha(senhaAtual: string, novaSenha: string): Observable<any> {
+    const usuarioId = this.getUsuarioId();
+    return this.http.put<any>(`${this.apiUrl}/usuarios/${usuarioId}/alterar-senha`, {
+      senhaAtual,
+      novaSenha
+    }).pipe(
+      tap(() => {
+        // Atualiza localmente a senha do usuário (opcional)
+        localStorage.setItem('senhaUsuario', novaSenha);
+      })
+    );
+  }
+
   // Método de logout para remover as informações do usuário do localStorage
   logout(): void {
     localStorage.removeItem('usuarioId');

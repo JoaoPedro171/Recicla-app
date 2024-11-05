@@ -1,3 +1,9 @@
+.page-help {
+  background-color: #e0f7fa; /* Cor de fundo suave */
+  min-height: 100vh; /* Garante que o fundo cubra toda a altura da página */
+  padding-bottom: 20px; /* Espaço extra no final da página */
+}
+
 .header-button {
     position: absolute;
     top: 20px;
@@ -23,11 +29,6 @@
 
 .back-button h2 {
     margin-top: 11px;
-}
-
-ion-content {
-    --background: #f4f4f9; /* Fundo leve para a página */
-    padding: 16px;
 }
   
   /* Estilo geral para cada alerta na lista */
@@ -80,5 +81,9 @@ ion-item:hover {
     transform: scale(1.02);
     transition: transform 0.2s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+ion-list {
+  padding: 0;
 }
   
