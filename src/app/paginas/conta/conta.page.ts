@@ -33,5 +33,8 @@ export class ContaPage {
     this.router.navigate(['/home']);
   };
 
+  voltar() {
+    this.router.navigate(['/home']);
+  }
   
 }

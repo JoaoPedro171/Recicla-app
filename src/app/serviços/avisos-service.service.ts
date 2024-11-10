@@ -6,17 +6,17 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AvisosService {
-  private apiUrl = 'https://seu-backend-url.com/api'; // URL do seu back-end
+  private apiUrl = 'http://localhost:8080/alerta'; // URL do seu back-end
 
   constructor(private http: HttpClient) {}
 
   // Método para buscar alertas do usuário logado
   buscarAlertas(usuarioId: string): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/alertas?usuarioId=${usuarioId}`);
+    return this.http.get<any[]>(`${this.apiUrl}/meus-alerta?usuarioId=${usuarioId}`);
   }
 
   // Método para enviar um alerta
   enviarAlerta(dadosAlerta: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/alertas`, dadosAlerta);
+    return this.http.post(`${this.apiUrl}`, dadosAlerta);
   }
 }

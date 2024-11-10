@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'https://seu-backend-url.com/api'; // URL do seu back-end
+  private apiUrl = 'http://localhost:8080/usuario'; // URL do seu back-end
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -42,15 +42,10 @@ export class AuthService {
 
   alterarSenha(senhaAtual: string, novaSenha: string): Observable<any> {
     const usuarioId = this.getUsuarioId();
-    return this.http.put<any>(`${this.apiUrl}/usuarios/${usuarioId}/alterar-senha`, {
+    return this.http.put<any>(`${this.apiUrl}/${usuarioId}/alterar-senha`, {
       senhaAtual,
       novaSenha
-    }).pipe(
-      tap(() => {
-        // Atualiza localmente a senha do usuário (opcional)
-        localStorage.setItem('senhaUsuario', novaSenha);
-      })
-    );
+    });
   }
 
   // Método de logout para remover as informações do usuário do localStorage

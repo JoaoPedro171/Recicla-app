@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'ajuda',
     loadChildren: () => import('./paginas/ajuda/ajuda.module').then( m => m.AjudaPageModule)
   },
+  {
+    path: 'senha',
+    loadChildren: () => import('./paginas/senha/senha.module').then( m => m.SenhaPageModule)
+  },
 ];
 
 @NgModule({

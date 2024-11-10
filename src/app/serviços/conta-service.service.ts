@@ -6,11 +6,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ContaService {
-  private apiUrl = 'https://seu-backend-url.com/conta';
+  private apiUrl = 'http://localhost:8080/usuario'; // URL base do usuário
 
   constructor(private http: HttpClient) {}
 
   registrarConta(dadosConta: any): Observable<any> {
-    return this.http.post(this.apiUrl, dadosConta);
+    return this.http.post(`${this.apiUrl}/register`, dadosConta);
+  }
+
+  recuperarSenha(email: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/recuperar-senha`, { email });
   }
 }
